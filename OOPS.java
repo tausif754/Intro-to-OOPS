@@ -14,35 +14,30 @@ class Student{
     String name;
     int age;
 
-    public void studentInfo(){
-        System.out.println(this.name);
-        System.out.println(this.age);
+    public void studentInfo(String name){
+        System.out.println(name);
     }
-// Parameterized constructor
-    Student(String name,int age){
-        // System.out.println("Constructor called");
-        this.name=name;
-        this.age=age;
+    public void studentInfo(int age){
+        System.out.println(age);
     }
-// copy Constructor
-    Student(Student s2){
-        this.name=s2.name;
-        this.age=s2.age;
 
-    }
+    // public void studentInfo(String name,int age){
+    //     System.out.println(name+ " "+ age);
+    // }
+    
+
 }
 
 
 public class OOPS{
     public static void main(String args[]){
-        Student s=new Student("Tausif",22);
+        Student s=new Student();
         s.name="Tausif";
         s.age=22;
-        // s.studentInfo();
-
-        Student s2=new Student(s);
-        s2.studentInfo();
-
+        
+        s.studentInfo(s.name);
+        s.studentInfo(s.age);
+        
     }
 
 }

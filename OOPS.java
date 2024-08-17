@@ -10,21 +10,23 @@ class Pen{
         // System.out.println(this.type);
     }
 }
+class Student{
+    String name;
+    int age;
 
+    public void studentInfo(){
+        System.out.println(this.name);
+        System.out.println(this.age);
+    }
+}
 
 
 public class OOPS{
     public static void main(String args[]){
-        Pen pen1=new Pen();
-        pen1.color="blue";
-        pen1.type="gel";
-        
-        Pen pen2=new Pen();
-        pen2.color="black";
-        pen2.type="ballpoint";
-
-        pen1.printColor();
-        pen2.printColor();
+        Student s=new Student();
+        s.name="Tausif";
+        s.age=22;
+        s.studentInfo();
 
     }
 
